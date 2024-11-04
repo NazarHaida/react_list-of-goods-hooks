@@ -2,7 +2,6 @@ import 'bulma/css/bulma.css';
 import './App.scss';
 import React, { useState } from 'react';
 
-
 enum SortType {
   ALPHABETICALLY = 'alphabetically',
   LENGTH = 'length',
@@ -69,7 +68,7 @@ export const App: React.FC = () => {
         >
           Reverse
         </button>
-        {(sortField !== '' || reverse) && (
+        {(sortField !== SortType.DEFAULT || reverse) && (
           <button
             onClick={() => {
               setSortField(SortType.DEFAULT);
